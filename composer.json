@@ -1,5 +1,5 @@
 {
-    "name": "sevengroupfrance/sulu-color-picker-bundle",
+    "name": "sevengroupfrance/sulu-icon-picker-bundle",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -10,13 +10,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "SevenGroupFrance\\SuluColorPickerBundle\\": "src"
+            "SevenGroupFrance\\SuluIconPickerBundle\\": "src"
         }
     },
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/sevenGroupFrance/sulu-color-picker-bundle/"
+            "url": "https://github.com/sevenGroupFrance/sulu-icon-picker-bundle/"
         },
         {
             "type": "path",
