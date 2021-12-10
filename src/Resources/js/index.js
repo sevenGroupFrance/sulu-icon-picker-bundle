@@ -1,4 +1,4 @@
 import { fieldRegistry } from 'sulu-admin-bundle/containers'
-import ColorPickerCustom from './components/ColorPickerCustom/ColorPickerCustom';
+import FontIconPicker from './components/FontIconPicker/FontIconPicker';
 
-fieldRegistry.add('color_picker_custom', ColorPickerCustom);
+fieldRegistry.add('font_icon_picker', FontIconPicker);
