@@ -4,7 +4,7 @@ namespace SevenGroupFrance\SuluIconPickerBundle\Content\Types;
 
 use Sulu\Component\Content\SimpleContentType;
 
-class FontIconPickerCustom extends SimpleContentType
+class FontIconPicker extends SimpleContentType
 {
     public function __construct()
     {
