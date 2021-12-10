@@ -1,4 +1,4 @@
 import { fieldRegistry } from 'sulu-admin-bundle/containers'
-import FontIconPicker from './components/FontIconPicker/FontIconPicker';
+import FontIconPickerApp from './components/FontIconPicker/FontIconPickerApp';
 
-fieldRegistry.add('font_icon_picker', FontIconPicker);
+fieldRegistry.add('font_icon_picker', FontIconPickerApp);
