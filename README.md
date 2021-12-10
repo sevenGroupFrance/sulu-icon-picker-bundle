@@ -40,6 +40,6 @@ on the add button to add this library to your selection](assets/images/ip-6.png)
 
 
 ## Use in your template files
-Once installed, to use this new content type, you'll have to create a new property with the type `custom_toggle`.
+Once installed, to use this new content type, you'll have to create a new property with the type `font_icon_picker`.
 
 ![How to use the new content type](assets/images/ct-5.png)
