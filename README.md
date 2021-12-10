@@ -31,6 +31,12 @@ This bundle will import an icon picker from the [react-fonticonpicker](https://w
 7. In `assets/admin`, `npm run watch` or `npm run build`
 
 ## Create your own icon list with IcoMoon
+From [this page](https://icomoon.io/app/#/select), we can choose whatever icons we want to use. If you want to import a library, click here:\
+![click on the icon with the books in it](assets/images/ip-5.png)
+
+From here, you can choose whatever library you want by clicking on the `+  Add` button.\
+![click 
+on the add button to add this library to your selection](assets/images/ip-6.png)
 
 
 ## Use in your template files
