@@ -52,5 +52,5 @@ Once installed, to use this new content type, you'll have to create a new proper
 ```
 
 ## Known issues
-- We don't know why, but when an icon picker appears on the application's back, the save button activates without doing nothing. The icon picker itself works as intended, but we don't know how to prevent the safe button from activating on its own.
+- We don't know why, but when an icon picker appears on the application's back, the save button activates on its own. The icon picker itself works as intended, but we don't know how to prevent the safe button from activating on its own.
 - The icon picker cannot read icon's `<path>` with `style` attributes on them. This is because we try to render an SVG within a react component, thus the `style` attribute should be an object, and the several kebab-case attributes should be converted to camelCase.
