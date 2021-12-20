@@ -30,10 +30,10 @@ From here, you can choose whatever library you want by clicking on the `+  Add` 
 on the add button to add this library to your selection](assets/images/ip-6.png)
 
 Then, choose the icons you want to use in your project by clicking on them or select all in the menu on the top right side of your selection.
-In the bottom menu, click on the `Generate SVG & More` button. Then, on the same button, click on the "download" button.
+In the bottom menu, click on the `Generate SVG & More` button. Then, click on the "download" button.
 
 In the file you just downloaded, you'll need two files: `selection.json` and `symbol-defs`.
-Replace the bundle's `selection.json` file content with your own, and replace the bundle's `Iconlist.js` file's `<defs>` section with your own.
+Replace the bundle's `selection.json` file content with your own, and replace the bundle's `Iconlist.js` file's `<defs>` tags content with your own.
 If you want to put the entire SVG in `Iconlist.js`'s return function, please be careful to convert inline style with react style (from string to object).
 
 ## Load your SVG in your application's front
@@ -52,5 +52,5 @@ Once installed, to use this new content type, you'll have to create a new proper
 ```
 
 ## Known issues
-- We don't know why, but when an icon picker appears on the application's back, the save button activates on its own. The icon picker itself works as intended, but we don't know how to prevent the safe button from activating on its own.
-- The icon picker cannot read icon's `<path>` with `style` attributes on them. This is because we try to render an SVG within a react component, thus the `style` attribute should be an object, and the several kebab-case attributes should be converted to camelCase.
+- We don't know why, but when an icon picker appears on the application's back, the save button activates on its own. The icon picker itself works as intended, but we don't know how to prevent the save button from activating on its own.
+- The icon picker cannot read an icon's `<path>` with `style` attribute on them. This is because we try to render an SVG within a react component, thus the `style` attribute should be an object, and the several kebab-case attributes should be converted to camelCase.
