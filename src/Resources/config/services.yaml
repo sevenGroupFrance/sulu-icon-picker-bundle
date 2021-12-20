@@ -5,3 +5,6 @@ services:
   font_icon_picker:
     class: SevenGroupFrance\SuluIconPickerBundle\Content\Types\FontIconPicker
     tags: [{ name: "sulu.content.type", alias: "font_icon_picker" }]
+  icon_list:
+    class: SevenGroupFrance\SuluIconPickerBundle\Content\Types\IconList
+    tags: [{name: "sulu.content.type", alias: "icon_list"}]

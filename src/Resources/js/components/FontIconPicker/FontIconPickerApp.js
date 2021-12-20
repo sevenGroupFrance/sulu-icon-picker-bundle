@@ -4,7 +4,6 @@ import '@fonticonpicker/react-fonticonpicker/dist/fonticonpicker.base-theme.reac
 import '@fonticonpicker/react-fonticonpicker/dist/fonticonpicker.material-theme.react.css';
 import iconSet from "./selection.json";
 import { iconList } from "icomoon-react";
-import Iconlist from './Iconlist';
 
 class FontIconPickerApp extends React.PureComponent {
   handleInputChange = (value) => {
@@ -25,7 +24,6 @@ class FontIconPickerApp extends React.PureComponent {
     );
     return (
       <div className="icon-container">
-        <Iconlist />
         <FontIconPicker
           icons={iconList(iconSet)}
           theme='bluegrey'

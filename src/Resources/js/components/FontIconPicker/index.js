@@ -1,3 +1,4 @@
-import FontIconPickerApp from "./FontIconPicker";
+import FontIconPickerApp from "./FontIconPickerApp";
+import Iconlist from "./Iconlist"
 
-export default FontIconPickerApp;
+export {FontIconPickerApp, Iconlist};
