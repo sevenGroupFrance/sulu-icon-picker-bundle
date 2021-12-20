@@ -50,7 +50,14 @@ Once installed, to use this new content type, you'll have to create a new proper
   </meta>
 </property>
 ```
-
+Also, to load the SVG on your back application, you'll have to create a new property with the type `icon_list` at the very top of your properties list.
+```
+<property name="icon" type="icon_list">
+  <meta>
+    <title lang="en"></title>
+  </meta>
+</property>
+```
 ## Known issues
 - We don't know why, but when an icon picker appears on the application's back, the save button activates on its own. The icon picker itself works as intended, but we don't know how to prevent the save button from activating on its own.
 - The icon picker cannot read an icon's `<path>` with `style` attribute on them. This is because we try to render an SVG within a react component, thus the `style` attribute should be an object, and the several kebab-case attributes should be converted to camelCase.
