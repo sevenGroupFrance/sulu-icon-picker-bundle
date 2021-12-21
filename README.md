@@ -52,7 +52,7 @@ Once installed, to use this new content type, you'll have to create a new proper
 ```
 Also, to load the SVG on your back application, you'll have to create a new property with the type `icon_list` at the very top of your properties list.
 ```
-<property name="icon" type="icon_list">
+<property name="your_icon_list" type="icon_list">
   <meta>
     <title lang="en"></title>
   </meta>
