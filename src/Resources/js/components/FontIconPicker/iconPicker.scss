@@ -1,0 +1,156 @@
+[class*="iconpicker-container"] {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    > [class*="icon-preview"] {
+        width: 100px;
+        height: 100%;
+        border: 1px solid lightgray;
+        background-color: white;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        > [class*="svg-container"] {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            > [class*="icon-container"] {
+                display: flex;
+                width: 80%;
+                height: 80%;
+                border: 1px solid lightgray;
+                align-items: center;
+                > svg {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0.3em;
+                }
+                > [class*="delete-icon"] {
+                    width: 20%;
+                    height: 100%;
+                    background: lightgray;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: ease 0.2s;
+                }
+                > [class*="delete-icon"]:hover {
+                    background: darkgray;
+                }
+            }
+        }
+        > [class*="arrow-container"] {
+            height: 100%;
+            background: lightgrey;
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.2s ease;
+            cursor: pointer;
+            > [class*="arrow"] {
+                border: solid black;
+                border-width: 0 3px 3px 0;
+                display: inline-block;
+                padding: 3px;
+                height: 5px;
+                transition: 0.1s ease;
+            }
+            > [class*="down"] {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+            }
+            > [class*="up"] {
+                transform: rotate(225deg);
+                -webkit-transform: rotate(225deg);
+            }
+        }
+        > [class*="arrow-container"]:hover {
+            background: darkgrey;
+        }
+    }
+    > [class*="iconpicker-main"] {
+        position: absolute;
+        display: inline-block;
+        width: 260px;
+        background-color: white;
+        border: 1px solid rgb(114, 114, 114);
+        z-index: 1;
+        > [class*="iconpicker-menu"] {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            border-bottom: 1px solid rgb(114, 114, 114);
+            > [class*="arrow-container"] {
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: lightgray;
+                transition: 0.2s ease;
+                opacity: 0.2;
+                [class*="arrow"] {
+                    border: solid black;
+                    border-width: 0 3px 3px 0;
+                    display: inline-block;
+                    padding: 3px;
+                    height: 5px;
+                }
+                [class*="left"] {
+                    transform: rotate(135deg);
+                    -webkit-transform: rotate(135deg);
+                }
+                [class*="right"] {
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                }
+            }
+            [class*="active"] {
+                opacity: 1;
+                cursor: pointer;
+            }
+            > [class*="active"]:hover {
+                background: darkgrey;
+            }
+            [class*="i-search-field"] {
+                height: 30px;
+                border-radius: 5px;
+                border: 1px solid grey;
+            }
+        }
+        > [class*="iconpicker-list"] {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: baseline;
+            min-height: 250px;
+            padding: 0.5em;
+            > [class*="svg-container"] {
+                width: 20%;
+                height: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                > svg {
+                    width: 98%;
+                    height: 98%;
+                    padding: 0.5em;
+                    border-radius: 5px;
+                    transition: 0.2s ease;
+                    cursor: pointer;
+                }
+            }
+            > [class*="svg-container"]:hover svg {
+                background-color: lightgray;
+            }
+            > [class*="svg-container"]:active svg {
+                background-color: rgb(190, 190, 190);
+            }
+        }
+    }
+}
