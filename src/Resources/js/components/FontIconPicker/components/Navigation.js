@@ -22,7 +22,7 @@ const Navigation = (
     let newCurrentpage = currentPage
     let newFirstActive = firstActive
     let newLastActive = lastActive
-    newCurrentpage += nb
+    newCurrentpage += parseInt(nb)
     
     if (newCurrentpage <= 1) {
       newCurrentpage = 1;
