@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MainContainer from "./components/MainContainer";
 import ToggleButton from "./components/ToggleButton"
+import useComponentVisible from "./assets/useComponentVisible";
 import './iconPicker.scss'
 
 const Iconpicker = (props) => {
@@ -15,7 +16,12 @@ const Iconpicker = (props) => {
   const [upDown, setUpDown] = useState('down')
   const [inputValue, setInputValue] = useState('')
   const [value, setValue] = useState('')
-  const elePerPage = 25
+  const elePerPage = 25;
+  const {
+    ref,
+    isComponentVisible,
+    setIsComponentVisible
+  } = useComponentVisible(true, setHidden, setUpDown);
 
   /*
    * useEffect
@@ -37,8 +43,11 @@ const Iconpicker = (props) => {
     setIconlist(arr);
     setRenderedIconlist(arr)
     setShownIcons(arr.slice(0, elePerPage))
-    setValue(props.value)
-    arr.length > elePerPage ? setLastActive(true) : '';
+    if (props.value) {
+      setValue(props.value[0])
+      setCurrentPage(parseInt(props.value[1]))
+    }
+
   }, [])
 
   const deleteIcon = (e) => {
@@ -62,26 +71,37 @@ const Iconpicker = (props) => {
 
     setReturnedIcon(newReturnedIcon)
     setValue(icon)
-    props.onChange(icon);
+    props.onChange({ icon, currentPage });
     props.onFinish();
   }
 
   return (
-    <div className="iconpicker-container">
+    <div
+      className="iconpicker-container"
+      ref={ref}
+      onClick={() => { setIsComponentVisible(true) }}
+      onFocus={() => { setIsComponentVisible(true) }}
+    >
       <ToggleButton
+        hidden={hidden}
         setHidden={setHidden}
         upDown={upDown}
         setUpDown={setUpDown}
         returnedIcon={returnedIcon}
         setReturnedIcon={setReturnedIcon}
+        setFirstActive={setFirstActive}
+        setLastActive={setLastActive}
+        currentPage={currentPage}
+        renderedIconlist={renderedIconlist}
+        elePerPage={elePerPage}
         value={value}
-        setValue={setValue}
-        props={props}
         deleteIcon={deleteIcon}
       />
       {
-        !hidden &&
+        isComponentVisible && !hidden &&
         <MainContainer
+          setHidden={setHidden}
+          setUpDown={setUpDown}
           elePerPage={elePerPage}
           iconlist={iconlist}
           renderedIconlist={renderedIconlist}
