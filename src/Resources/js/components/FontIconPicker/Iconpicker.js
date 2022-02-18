@@ -71,7 +71,7 @@ const Iconpicker = (props) => {
 
     setReturnedIcon(newReturnedIcon)
     setValue(icon)
-    props.onChange({ icon, currentPage });
+    props.onChange([ icon, currentPage ]);
     props.onFinish();
   }
 
