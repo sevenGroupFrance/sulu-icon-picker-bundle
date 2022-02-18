@@ -25,7 +25,7 @@ const Search = (
     setInputValue(inputValue)
   }
   return (
-    <div className={`icon-search`}>
+    <div className="icon-search">
       <input
         type="text"
         value={inputValue}
