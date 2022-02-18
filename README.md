@@ -58,5 +58,14 @@ Also, to load the SVG on your back application, you'll have to create a new prop
   </meta>
 </property>
 ```
+
+As the icon property returns an array, in your twig template, you will need to precise the first parameter of this array, for example:
+```
+{% if block.icon %}
+  <svg class="{{block.icon[0]}}" aria-hidden="true" focusable="false">
+    <use xlink:href='#{{block.icon[0]}}'/>
+  </svg>
+{% endif %}
+```
 ## Known issues
 - The icon picker cannot read an icon's `<path>` with `style` attribute on them. This is because we try to render an SVG within a react component, thus the `style` attribute should be an object, and the several kebab-case attributes should be converted to camelCase.
