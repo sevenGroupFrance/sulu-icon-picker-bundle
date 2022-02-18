@@ -38,7 +38,8 @@
                     cursor: pointer;
                     transition: ease 0.2s;
                 }
-                > [class*="delete-icon"]:hover {
+                > [class*="delete-icon"]:hover,
+                > [class*="delete-icon"]:focus {
                     background: darkgray;
                 }
             }
@@ -69,7 +70,8 @@
                 -webkit-transform: rotate(225deg);
             }
         }
-        > [class*="arrow-container"]:hover {
+        > [class*="arrow-container"]:hover,
+        > [class*="arrow-container"]:focus {
             background: darkgrey;
         }
     }
@@ -130,25 +132,29 @@
             align-content: baseline;
             min-height: 250px;
             padding: 0.5em;
-            > [class*="svg-container"] {
-                width: 20%;
-                height: 45px;
+            tr {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                > svg {
-                    width: 98%;
-                    height: 98%;
-                    padding: 0.5em;
-                    border-radius: 5px;
-                    transition: 0.2s ease;
-                    cursor: pointer;
+                [class*="svg-container"] {
+                    width: 20%;
+                    height: 45px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    > svg {
+                        width: 98%;
+                        height: 98%;
+                        padding: 0.5em;
+                        border-radius: 5px;
+                        transition: 0.2s ease;
+                        cursor: pointer;
+                    }
                 }
             }
-            > [class*="svg-container"]:hover svg {
+            [class*="svg-container"]:hover svg,
+            [class*="svg-container"]:focus svg {
                 background-color: lightgray;
             }
-            > [class*="svg-container"]:active svg {
+            [class*="svg-container"]:active svg {
                 background-color: rgb(190, 190, 190);
             }
         }
