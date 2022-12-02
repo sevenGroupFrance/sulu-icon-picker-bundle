@@ -36,6 +36,38 @@ In the file you just downloaded, you'll need two files: `selection.json` and `sy
 Replace the bundle's `selection.json` file content with your own, and replace the bundle's `Iconlist.js` file's `<defs>` tags content with your own.
 If you want to put the entire SVG in `Iconlist.js`'s return function, please be careful to convert inline style with react style (from string to object).
 
+## Configure your own list (since 1.0.4)
+First, create a `iconlist` folder in your `assets/admin` folder. Then, create a `Iconlist.js` where you'll create a React functionnal component:
+```
+import * as React from 'react';
+
+const Iconlist = () => {
+}
+
+export default Iconlist
+```
+
+Then, add the `svg` file content directly in a `return` function, like this:
+```
+import * as React from 'react';
+
+const Iconlist = () => {
+  return(
+    <svg aria-hidden="true" className="iconlist" style={{ position: "absolute", width: 0, height: 0, overflow: "hidden" }} version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        **your <symbol> here**
+      </defs>
+    </svg>
+  )
+}
+
+export default Iconlist
+```
+
+### ALWAYS REMEMBER TO CONVERT YOUR HTML PROPERTIES TO REACT PROPERTIES SYNTAX
+example:
+`<path style="fill: '#969695'" ...` to `<path style={{ fill: "#969695" }} ...`
+
 ## Load your SVG in your application's front
 In your project's `templates` directory, create a new twig template.
 In this template, paste the `symbol-defs` file content. Once done, import your twig template in your base twig template right after the `<body>` tag:\
